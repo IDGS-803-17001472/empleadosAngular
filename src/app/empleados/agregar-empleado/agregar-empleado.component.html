@@ -1,0 +1,31 @@
+<div class="col">
+  <h3>Agregar</h3>
+  <hr />
+  <form (submit)="agregar()" class="needs-validation" novalidate>
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" [(ngModel)]="nuevo.nombre" required>
+    </div>
+    <div class="mb-3">
+      <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+      <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" [(ngModel)]="nuevo.fechaNacimiento" required>
+    </div>
+    <div class="mb-3">
+      <label for="correo" class="form-label">Correo Electrónico</label>
+      <input type="email" class="form-control" id="correo" placeholder="Correo Electrónico" name="correo" [(ngModel)]="nuevo.correo" required>
+    </div>
+    <div class="mb-3">
+      <label for="telefono" class="form-label">Teléfono</label>
+      <input type="number" class="form-control" id="telefono" placeholder="Teléfono" name="telefono" [(ngModel)]="nuevo.telefono" required>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="sexoMujer" name="sexo" [(ngModel)]="nuevo.sexo" value="mujer" required>
+      <label class="form-check-label" for="sexoMujer">Mujer</label>
+    </div>
+    <div class="form-check">
+    <input class="form-check-input" type="radio" id="sexoHombre" name="sexo" [(ngModel)]="nuevo.sexo" value="hombre" required>
+    <label class="form-check-label" for="sexoHombre">Hombre</label>
+  </div>
+    <button type="submit" class="btn btn-primary">Agregar</button>
+  </form>
+</div>
